@@ -8,15 +8,24 @@ const getMobileOS = () => {
     const ua = navigator.userAgent;
     if (/android/i.test(ua)) {
         return 'Android';
-    } else if (/iPad|iPhone|iPod/.test(ua)) {
+    }
+    if (/iPad|iPhone|iPod/.test(ua)) {
         return 'iOS';
     }
     return 'Other';
 };
 
-alert(getMobileOS());
-
 function Index() {
+    const currentOS = getMobileOS();
+    if (currentOS !== 'Other') {
+        return (
+            <div>
+                <div>On Mobile!</div>
+                <a href='c2mobileapp://'>Open mobile app!</a>
+            </div>
+        );
+    }
+
     return (
         <div className='p-2'>
             <h3>Welcome Home!</h3>
