@@ -22,6 +22,8 @@ function Index() {
             <div>
                 <div>On Mobile!</div>
                 <a href='c2mobileapp://'>Open mobile app!</a>
+                <a href='itms-apps://itunes.apple.com/us/app/c2crm/id605389749'>Download iOS</a>
+                <a href='https://play.google.com/store/apps/details?id=com.clearc2.C2CRM'>Download Android</a>
             </div>
         );
     }
